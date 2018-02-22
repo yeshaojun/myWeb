@@ -1,0 +1,321 @@
+@import "base.less";
+
+body{
+	background: #f5f5f5;
+	font-size: 14px;
+}
+
+.icon-commom(@pox,@poy,@iw,@ih){
+	background-position:@pox @poy;
+	width: @iw;
+	height: @ih;
+	display: block;
+}
+
+.clearfix {
+  display: block;
+  zoom: 1;
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+// 版心
+#container{
+	min-width: 300px;
+	max-width: 640px;
+	margin:0px auto;
+}
+//head头部搜索
+#header{
+	width: 100%;
+	position: fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 999;
+	.header-box{
+		height:40px;
+		background:rgba(201,21,35,0.85);
+		position: relative;
+		#container;
+		.icon-logo{
+			.icon-commom(0px,-103px,60px,36px);
+			position: absolute;
+			top: 4px;
+			left: 10px;
+		}
+		form{
+			width: 100%;
+			height: 40px;
+			padding-left: 75px;
+			padding-right: 55px;
+			position: relative;
+			input{
+				height: 30px;
+				width: 100%;
+				border-radius: 15px;
+				margin-top: 5px;
+				padding-left: 30px;
+			}
+			.icon-search{
+				.icon-commom(-60px,-109px,20px,20px);
+				position: absolute;
+				top:10px;
+				left:84px;
+			}
+		}
+		.login{
+			position: absolute;
+			right: 10px;
+			color: #fff;
+			font-size: 16px;
+			line-height: 16px;
+			top:12px;
+		}
+		
+	}
+}
+
+// 轮播图
+#jd-bannar{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	ul{
+		&:first-child{
+			width: 800%;
+			li{
+				width: 12.5%;
+				float: left;
+				img{
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+		&:last-child{
+			width: 118px;
+			height: 6px;
+			position: absolute;
+			left:50%;
+			bottom: 10px;
+			margin-left: -59px;
+			li{
+				width: 6px;
+				height: 6px;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				float: left;
+				margin-left: 8px;
+				&.active{
+					background: #fff;
+				}
+				&:hover{
+					background: #fff;
+				}
+			}
+
+		}
+	}
+}
+
+//菜单导航
+#jd-menu{
+	width: 100%;
+	height: 150px;
+	border-bottom: 1px solid #e0e0e0;
+	background: #fff;
+	padding-top: 10px;
+	ul{
+		width: 100%;
+		list-style: none;
+		li{
+			width: 25%;
+			float: left;
+			height: 69px;
+			a{
+				display: block;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				img{
+					width: 40px;
+					height: 40px;
+					display: block;
+					margin:0 auto;
+				}
+				p{
+					margin-top: 4px;
+					font-size: 12px;
+					color: #777;
+				}
+			}
+		}
+	}
+}
+
+//产品模块
+#jd-product{
+	//公共的头样式
+	.pro-top-commom{
+		height: 32px;
+		width: 100%;
+		.pro-top-left{
+			float: left;
+			h3{
+				float: left;
+				margin-left: 8px;
+				margin-top: 6px;
+				font-size: 15px;
+				color:#777;
+				font-weight: normal;
+			}
+		}
+		.pro-top-right{
+			float: right;
+			margin-right: 8px;
+			margin-top: 6px;
+		}
+	}
+
+	.container-commom{
+		background: #fff;
+		margin:0 5px;
+		margin-top: 10px;
+		padding-bottom: 10px;
+		box-shadow: 0 0 1px 1px #e0e0e0;
+	}
+	//秒杀
+	.skill-container{
+		.container-commom;
+		.pro-top{
+			.pro-top-commom;
+			.pro-top-left{
+				.skill-icon{
+					background: url(../img/seckill-icon.png) no-repeat;
+					background-size: 16px 20px;
+					width: 16px;
+					height: 20px;
+					display: block;
+					float: left;
+					margin-left: 8px;
+					margin-top: 6px;
+				}
+				h3{
+					color: red;
+				}
+				.skill-time{
+					float: left;
+					margin-left: 8px;
+					margin-top: 6px;
+					.num{
+						display: inline-block;
+						background: #333;
+						width: 15px;
+						color: #fff;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.pro-body{
+			margin-top: 6px;
+			ul{
+				width: 100%;
+				list-style: none;
+				li{
+					width: 33.33%;
+					float: left;
+					.img-box{
+						width:100%;
+						border-right:1px solid #f0f0f0;
+						img{
+							width: 64%;
+							display: block;
+							margin: 0 auto;				
+						}
+					}
+					.now-price{
+						text-align: center;
+						font-size: 16px;
+						color: red;
+					}
+					.old-price{
+						text-align: center;
+						font-size: 16px;
+						color: #777;
+						text-decoration: line-through;
+					}
+					&:last-child{
+						.img-box{
+							border:none;
+						}	
+					}
+				}	
+			}
+		}
+	}
+
+	// 超值购
+	.buy-container{
+		.container-commom;
+		.pro-top{
+			.pro-top-commom;
+			position: relative;
+			.pro-top-left{
+				h3{
+					margin-left: 14px;
+				}
+				&::before{
+					content: '';
+					width: 4px;
+					height: 16px;
+					background: #333;
+					position: absolute;
+					left:6px;
+					top:8px;
+				}
+			}
+			border-bottom: 1px solid #ccc;
+		}
+		.pro-body{
+			img{
+				width: 100%;
+				display: block;
+			}
+			.img-left-top{
+				float: left;
+				width: 50%;
+				border-right: 1px solid #e0e0e0;
+			}
+			.img-right-top{
+				float: right;
+				width: 50%;
+				border-bottom:1px solid #e0e0e0;
+			}
+			.img-right-bottom{
+				float: right;
+				width: 50%;	
+			}
+		}
+	}
+
+	.hot-container{
+		.buy-container;
+		.img-left-top{
+			float: left;
+		}
+		.img-right-top{
+			float: left;
+		}
+		.img-right-bottom{
+			float: right;
+		}
+	}
+}

@@ -1,0 +1,122 @@
+.container{
+	width: 100%;
+	background: url(../img/safe2.jpg) no-repeat;
+	background-position: center center;
+	height: 1166px;
+	position: relative;
+}
+.container .safe{
+	background: url(../img/dp.png) no-repeat;
+	width: 151px;
+	height: 166px;
+	position: absolute;
+	left:50%;
+	margin-left:-75px;
+	top:524px;
+	z-index: 2;
+}
+.container .point{
+	background: url(http://p4.qhimg.com/d/inn/8586571c/rada.png) no-repeat;
+    width: 660px;
+    height: 660px;
+    margin-left: -330px;
+    position: absolute;
+    top: 265px;
+    left: 50%;
+    animation: move 4s infinite linear;
+}
+
+@keyframes move{
+	0%{
+		transform: rotate(0deg);
+	}
+	0%{
+		transform: rotate(360deg);
+	}
+}	
+
+@keyframes strat{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+[class^='icon']{
+	background: url(../img/dp.png) no-repeat;
+	position: absolute;
+	left:50%;
+	transform: scale(0);
+	/*transition: all .8s linear;*/
+}
+.start .icon1{
+	background-position: -180px -17px;
+	width: 49px;
+	height: 49px;
+	margin-left: -112px;
+	top: 317px;
+	animation: strat 2s;
+	animation-fill-mode:forwards;
+}
+.start .icon2{    
+	background-position: -268px -12px;
+    width: 64px;
+    height: 64px;
+    margin-left: 105px;
+    top: 402px;
+    animation: strat 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode:forwards;
+}
+.start .icon3{
+	background-position: -362px -24px;
+	width: 36px;
+	height: 36px;
+	margin-left: 136px;
+	top: 557px;
+	animation: strat 2s;
+    animation-delay: 0.1s;
+    animation-fill-mode:forwards;
+}
+.start .icon4{
+	background-position: -418px -17px;
+	width: 54px;
+	height: 54px;
+	margin-left: 229px;
+	top: 631px;
+	animation: strat 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode:forwards;
+}
+.start .icon5{
+	background-position: -179px -99px;
+	width: 58px;
+	height: 58px;
+	margin-left: -238px;
+	top: 543px;
+	animation: strat 2s;
+    animation-delay: 2s;
+    animation-fill-mode:forwards;
+}
+.start .icon6{
+	background-position: -269px -104px;
+	width: 51px;
+	height: 51px;
+	margin-left: -211px;
+	top: 752px;
+	animation: strat 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode:forwards;
+}
+.start .icon7{
+	background-position: -345px -102px;
+	width: 58px;
+	height: 58px;
+	margin-left: 58px;
+	top: 747px;
+	animation: strat 2s;
+    animation-delay: 1s;
+    animation-fill-mode:forwards;
+}
